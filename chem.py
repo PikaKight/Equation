@@ -1,5 +1,5 @@
 class Thermal:
-    def heat_energy(self, q=None, m=None, c=None, t=None):
+    def heat_energy(self, m=None, c=None, t=None, q=None):
         if q is None:
            try: 
                q = m*c*t
@@ -24,7 +24,9 @@ class Thermal:
                 return t
             except: 
                 print("PLEASE PUT VAILD NUMBERS")
-           
+
+    def enthaply_of_solution(self, q=None, n=None, h=None):
+        h = q*n
 
 if __name__ == "__main__":
     given = {"m": 24, "c": 4.18, "t": 5}
